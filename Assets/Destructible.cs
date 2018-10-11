@@ -9,7 +9,7 @@ public class Destructible : MonoBehaviour {
     public List<GameObject> loot;
     public GameObject destroyParticles;
 
-    private int health;
+    public int health;
 	// Use this for initialization
 	void Start () {
         health = maxHealth;
@@ -25,9 +25,9 @@ public class Destructible : MonoBehaviour {
             {
                 Instantiate(item, transform.position + new Vector3(Random.Range(-1,1), Random.Range(-1, 1), Random.Range(-1, 1)), Quaternion.identity);
             }
-            GameObject particles = Instantiate(destroyParticles, transform.position, Quaternion.identity, transform);
+            GameObject particles = Instantiate(destroyParticles, transform.position, Quaternion.identity);
             Destroy(particles, 2f);
-            Destroy(gameObject,3f);
+            Destroy(gameObject);
         }
     }
 }
