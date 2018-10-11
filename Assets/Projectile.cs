@@ -60,7 +60,7 @@ public class Projectile : MonoBehaviour
         if(explosion != null)
         {
             GameObject exp = Instantiate(explosion, transform.position, Quaternion.identity);
-            Destroy(exp, 2f);
+            Destroy(exp, 1f);
         }
         if (splash)
         {

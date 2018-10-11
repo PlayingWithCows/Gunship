@@ -26,7 +26,7 @@ public class Destructible : MonoBehaviour {
                 Instantiate(item, transform.position + new Vector3(Random.Range(-1,1), Random.Range(-1, 1), Random.Range(-1, 1)), Quaternion.identity);
             }
             GameObject particles = Instantiate(destroyParticles, transform.position, Quaternion.identity);
-            Destroy(particles, 2f);
+            Destroy(particles, 1f);
             Destroy(gameObject);
         }
     }
