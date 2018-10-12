@@ -8,10 +8,10 @@ public class Player : MonoBehaviour {
     public float acceleration;
     public float brakeDistance;
 
-    private float desiredSpeed;
-    private float currentSpeed;
-    private Vector3 brakeSpot;
-    private bool blockade = false;
+    public float desiredSpeed;
+    public float currentSpeed;
+    public Vector3 brakeSpot;
+    public bool blockade = false;
 
 	// Use this for initialization
 	void Start () {
@@ -44,16 +44,19 @@ public class Player : MonoBehaviour {
             brakeSpot.y += brakeDistance;
         }
 
-        Debug.Log("Decelerating");
+        Debug.Log("Decelerating to desired speed: " + desiredSpeed);
     }
-    private void OnCollisionEnter(Collision col)
+    private void OnTriggerEnter(Collider col)
     {
-
+        Debug.Log(col);
         if (col.gameObject.GetComponent<Blockade>() != null)
         {
-            brakeSpot = col.contacts[0].point;
+            brakeSpot = col.gameObject.GetComponent<Collider>().ClosestPointOnBounds(transform.position);
+            brakeSpot.y = (brakeSpot.y - ((brakeSpot.y - transform.position.y) / 2f));
             brakeSpot.x = transform.position.x;
-            brakeSpot.z = 0;
+            brakeSpot.z = transform.position.z;
+            Debug.Log(brakeSpot);
+            Debug.Log(transform.position);
             blockade = true;
             Decelerate(0f);
             
@@ -66,7 +69,7 @@ public class Player : MonoBehaviour {
         {
             currentSpeed = Mathf.Clamp(currentSpeed + (acceleration * Time.deltaTime), 0, boatMaxSpeed);
         }
-        else
+        else if(desiredSpeed< currentSpeed)
         {
             currentSpeed = Mathf.Clamp(currentSpeed * (Mathf.Clamp(brakeSpot.y - transform.position.y, 0,1)), 0, boatMaxSpeed);
         }
