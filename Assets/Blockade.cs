@@ -5,8 +5,13 @@ using UnityEngine;
 public class Blockade : MonoBehaviour {
 
     private Player player;
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+
+    private void Start()
+    {
+        player = GameObject.FindObjectOfType<Player>();
+    }
+    void Update () {
         InvokeRepeating("CheckChildren", 1, 1);
 	}
 
