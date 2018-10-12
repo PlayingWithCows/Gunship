@@ -21,9 +21,10 @@ public class Blockade : MonoBehaviour {
         {
             if(player != null)
             {
+
                 player.Accelerate();
             }
-            Destroy(gameObject,1f);
+            Destroy(gameObject,0.3f);
         }
     }
 
