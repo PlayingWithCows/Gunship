@@ -596,7 +596,6 @@ MonoBehaviour:
   mapLength: 5
   mapParts:
   - {fileID: 1299422553554584, guid: 18a2f87696b1a62409e95307b2cdc916, type: 2}
-  - {fileID: 1420014469370700, guid: 7a37e00f07b36da4091114d030063d0a, type: 2}
 --- !u!4 &297100582
 Transform:
   m_ObjectHideFlags: 0
@@ -610,6 +609,7 @@ Transform:
   - {fileID: 1472410125}
   - {fileID: 1055790573}
   - {fileID: 1569006788}
+  - {fileID: 1536266365}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1021,6 +1021,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &622110884
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 297100582}
+    m_Modifications:
+    - target: {fileID: 4647780438651200, guid: 18a2f87696b1a62409e95307b2cdc916, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4647780438651200, guid: 18a2f87696b1a62409e95307b2cdc916, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4647780438651200, guid: 18a2f87696b1a62409e95307b2cdc916, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4647780438651200, guid: 18a2f87696b1a62409e95307b2cdc916, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4647780438651200, guid: 18a2f87696b1a62409e95307b2cdc916, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4647780438651200, guid: 18a2f87696b1a62409e95307b2cdc916, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4647780438651200, guid: 18a2f87696b1a62409e95307b2cdc916, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4647780438651200, guid: 18a2f87696b1a62409e95307b2cdc916, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 65847351438875726, guid: 18a2f87696b1a62409e95307b2cdc916,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 18a2f87696b1a62409e95307b2cdc916, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &638169147
 GameObject:
   m_ObjectHideFlags: 0
@@ -3683,6 +3730,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1536266365 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4647780438651200, guid: 18a2f87696b1a62409e95307b2cdc916,
+    type: 2}
+  m_PrefabInternal: {fileID: 622110884}
 --- !u!1 &1569006787
 GameObject:
   m_ObjectHideFlags: 0
@@ -4233,7 +4285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boatMaxSpeed: 15
   acceleration: 1
-  deceleration: 1
+  brakeDistance: 0
 --- !u!54 &1843773862
 Rigidbody:
   m_ObjectHideFlags: 0

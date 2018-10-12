@@ -22,14 +22,5 @@ public class Blockade : MonoBehaviour {
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-       
-        if (other.attachedRigidbody.transform.GetComponent<Player>() != null)
-        {
-            player = other.attachedRigidbody.transform.GetComponent<Player>();
-            player.Decelerate();
-            
-        }
-    }
+
 }

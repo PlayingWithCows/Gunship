@@ -140,6 +140,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4647780438651200}
+  - component: {fileID: 114596666358478598}
+  - component: {fileID: 65847351438875726}
   m_Layer: 0
   m_Name: Map1Part1
   m_TagString: Untagged
@@ -1948,6 +1950,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65847351438875726
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1299422553554584}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 100, z: 1}
+  m_Center: {x: 0, y: 50, z: 0}
 --- !u!65 &65921733517203280
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -2375,6 +2389,17 @@ MonoBehaviour:
   destroyParticles: {fileID: 1327517980598402, guid: 774023cdaa851c247a4ea42a1766f2d2,
     type: 2}
   health: 0
+--- !u!114 &114596666358478598
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1299422553554584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efbf9767a2a0a664c9ceea68f1858f15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114598886038880562
 MonoBehaviour:
   m_ObjectHideFlags: 1
