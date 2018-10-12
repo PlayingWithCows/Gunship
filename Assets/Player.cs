@@ -30,11 +30,13 @@ public class Player : MonoBehaviour {
     public void Accelerate()
     {
         desiredSpeed = boatMaxSpeed;
+        Debug.Log("Accelerating");
     }
 
     public void Decelerate()
     {
         desiredSpeed = 0;
+        Debug.Log("Decelerating");
     }
 
     private void ChangeSpeed()
@@ -45,7 +47,7 @@ public class Player : MonoBehaviour {
         }
         else
         {
-            currentSpeed = Mathf.Clamp(currentSpeed - (deceleration * Time.deltaTime), 0, boatMaxSpeed);
+            currentSpeed = Mathf.Clamp(currentSpeed - (deceleration*5 * Time.deltaTime), 0, boatMaxSpeed);
         }
     }
 }

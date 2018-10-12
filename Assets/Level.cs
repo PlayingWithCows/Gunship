@@ -10,7 +10,7 @@ public class Level : MonoBehaviour {
 	void Start () {
         for (int i = 0; i < mapLength; i++)
         {
-            Vector3 pos = new Vector3(0, mapPartHeight*i, 0);
+            Vector3 pos = new Vector3(0, mapPartHeight*i+10f, 0);
             Instantiate(mapParts[Random.Range(0, mapParts.Count)], pos, Quaternion.identity, transform);
         }
 	}
